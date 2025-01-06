@@ -69,6 +69,7 @@ If you find this work useful, please consider citing:
   year={2024},
   organization={Eurographics Association}
 }
+```
 
 ## License
 
