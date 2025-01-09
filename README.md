@@ -3,8 +3,9 @@
 Official implementation of **Adaptive Grids for Neural Scene Representation** presented at **VMV 2024**.  
 **[Project Page](https://vcai.mpi-inf.mpg.de/projects/agrids/)** | **[Paper](https://pure.mpg.de/rest/items/item_3624536/component/file_3624537/content)**
 
+<p align="center">
 <img src="assets/adaptive-grid.png" alt="Adaptive Grid" width="700">
-
+</p>
 
 ![Adaptive Grid Video](assets/dvgo_comparison.gif)  
 
