@@ -3,7 +3,8 @@
 Official implementation of **Adaptive Grids for Neural Scene Representation** presented at **VMV 2024**.  
 **[Project Page](https://vcai.mpi-inf.mpg.de/projects/agrids/)** | **[Paper](https://pure.mpg.de/rest/items/item_3624536/component/file_3624537/content)**
 
-![Adaptive Grid](assets/adaptive-grid.png)  
+<img src="assets/adaptive-grid.png" alt="Adaptive Grid" width="700">
+
 
 ![Adaptive Grid Video](assets/dvgo_comparison.gif)  
 
@@ -14,8 +15,6 @@ Official implementation of **Adaptive Grids for Neural Scene Representation** pr
 Clone the repository and install the required dependencies:
 
 ```bash
-git clone https://github.com/yourusername/yourrepository.git
-cd yourrepository
 pip install -r requirements.txt
 ```
 
@@ -23,39 +22,36 @@ pip install -r requirements.txt
 
 Follow these steps to train the model:
 
-1. **Prepare the Dataset**: Ensure your dataset is organized as required by the project.
-   
-2. **Run Training**: Use the following command to start training:
+1. **Prepare the Dataset**
+
+Download the required datasets and place them in the `data` folder. Below are the links to the datasets:
+
+- **NeRF Synthetic**: [Download here](https://drive.google.com/drive/folders/1cK3UDIJqKAAm7zyrxRYVFJ0BRMgrwhh4)
+- **NeRF LLFF Data**: [Download here](https://drive.google.com/drive/folders/1cK3UDIJqKAAm7zyrxRYVFJ0BRMgrwhh4)
+- **Synthetic NSVF**: [Download here](https://dl.fbaipublicfiles.com/nsvf/dataset/Synthetic_NSVF.zip)
+
+2. **Training**: Use the following command to start training:
 
     ```bash
     python train.py --config configs/your_config.yaml
     ```
 
-    Replace `your_config.yaml` with the appropriate configuration file.
-
-## Usage
+    Make sure to replace `your_config.yaml` with the appropriate configuration file from the `configs` folder.
 
 ### Inference
 
-To run inference with a trained model, use:
+For inference, use the `--render_only` flag and run the same command as training.
 
 ```bash
-python infer.py --checkpoint path/to/your/checkpoint
+python train.py --config configs/your_config.yaml --render_only
 ```
 
-## Evaluation
-
-To evaluate the model's performance on a specific dataset, use:
-
-```bash
-python evaluate.py --dataset path/to/your/dataset
-```
 
 ## Acknowledgements
 
-This codebase is based on the [DirectVoxGO (DVGO)](https://github.com/sunset1995/DirectVoxGO) implementation by Sunset1995. We thank the authors for their contributions and open-sourcing their work.
+This codebase is based on the [DirectVoxGO (DVGO)](https://github.com/sunset1995/DirectVoxGO) implementation by Sunset1995. 
 
----
+
 
 ## Citation
 
